@@ -11,3 +11,7 @@ test("should return false if a year is not divisible by 4", () => {
 test("should return true if a year is divisible by 4 but not divisible by 100", () => {
   expect(leapYear(2004)).toBe(true);
 });
+
+test("should return false if a year is divisible by 100 but not by 400", () => {
+  expect(leapYear(1900)).toBe(false);
+});
