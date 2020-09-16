@@ -13,4 +13,14 @@ const leapYear = (year) => {
   }
 };
 
-module.exports = leapYear;
+const leapYearsBetween = (startYear, endYear) => {
+  let leapYears = [];
+  for (let year = startYear; year <= endYear; year++) {
+    if (leapYear(year)) {
+      leapYears.push(year);
+    }
+  }
+  return leapYears;
+};
+
+export { leapYear, leapYearsBetween };

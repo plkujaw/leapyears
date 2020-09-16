@@ -10,19 +10,27 @@ A simple tool that will tell you whether a year is a leap year, according to the
 ### Acceptance Criteria
 
 ```
-$ leap_year?(2000)
+$ leapYear(2000)
  => true
-$ leap_year?(1970)
+$ leapYear(1970)
  => false
-$ leap_year?(1900)
+$ leapYear(1900)
  => false
-$ leap_year?(1988)
+$ leapYear(1988)
  => true
-$ leap_year?(1500)
+$ leapYear(1500)
  => false
 ```
 
 ## Extension Options
 
 - Write a program that takes a start year and an end year and returns an array of all the leap years between.
+
+```
+$ leapYearsBetween(2000, 2010)
+=> [2000, 2004, 2008]
+$ leapYearsBetween(1879, 1901)
+=> [1880, 1884, 1888, 1892, 1896]
+```
+
 - Write a program that when given a year, will return the closest leap year (this could be before or after the given year)
