@@ -33,4 +33,4 @@ const closestLeapYear = (year) => {
       }
     }
 };
-export { leapYear, leapYearsBetween, closestLeapYear };
+module.exports = { leapYear, leapYearsBetween, closestLeapYear };
