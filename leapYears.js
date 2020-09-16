@@ -1,14 +1,11 @@
 const leapYear = (year) => {
   if (year % 400 === 0) {
     return true;
-  }
-  if (year % 4 !== 0) {
+  } else if (year % 4 !== 0) {
     return false;
-  }
-  if (year % 4 === 0 && year % 100 !== 0) {
+  } else if (year % 4 === 0 && year % 100 !== 0) {
     return true;
-  }
-  if (year % 100 === 0 && year % 400 !== 0) {
+  } else if (year % 100 === 0 && year % 400 !== 0) {
     return false;
   }
 };
@@ -23,4 +20,17 @@ const leapYearsBetween = (startYear, endYear) => {
   return leapYears;
 };
 
-export { leapYear, leapYearsBetween };
+const closestLeapYear = (year) => {
+  if (leapYear(year)) return year;
+  else if (leapYear(year - 4) && leapYear(year + 4)) {
+    return [year - 4, year + 4];
+  } else if (leapYear(year - 2) && leapYear(year + 2)) {
+    return [year - 2, year + 2];
+  } else
+    for (let i = year - 1; i < year + 4; i++) {
+      if (leapYear(i)) {
+        return i;
+      }
+    }
+};
+export { leapYear, leapYearsBetween, closestLeapYear };

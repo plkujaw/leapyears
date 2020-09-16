@@ -34,3 +34,24 @@ $ leapYearsBetween(1879, 1901)
 ```
 
 - Write a program that when given a year, will return the closest leap year (this could be before or after the given year)
+
+```
+$ closestLeapYear(2000)
+=> 2000
+$ closestLeapYear(1999)
+=> 2000
+closestLeapYear(2003)
+=> 2004
+$ closestLeapYear(2005)
+=> 2004
+$ closestLeapYear(2001)
+=> 2000
+$ closestLeapYear(1901)
+=> 1904
+$ closestLeapYear(1881)
+=> 1880
+$ closestLeapYear(1890)
+=> [1888, 1892]
+$ closestLeapYear(1900)
+=> [1896, 1904]
+```
